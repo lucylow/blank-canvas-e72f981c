@@ -41,6 +41,7 @@ import LovableAnalytics from "./pages/LovableAnalytics";
 import LovableEnvironment from "./pages/LovableEnvironment";
 import LovableLogs from "./pages/LovableLogs";
 import LovableHealth from "./pages/LovableHealth";
+import DemoIntegrations from "./pages/DemoIntegrations";
 import PageTransition from "./components/PageTransition";
 import RouteLoadingIndicator from "./components/RouteLoadingIndicator";
 
@@ -112,6 +113,7 @@ const AppRoutes = () => {
         <Route path="/lovable/environment" element={<PageTransition keyProp={location.pathname}><LovableEnvironment /></PageTransition>} />
         <Route path="/lovable/logs" element={<PageTransition keyProp={location.pathname}><LovableLogs /></PageTransition>} />
         <Route path="/lovable/health" element={<PageTransition keyProp={location.pathname}><LovableHealth /></PageTransition>} />
+        <Route path="/demo-integrations" element={<PageTransition keyProp={location.pathname}><DemoIntegrations /></PageTransition>} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<PageTransition keyProp={location.pathname}><NotFound /></PageTransition>} />
       </Routes>
