@@ -8,6 +8,8 @@ import { WORKOS_CLIENT_ID, WORKOS_API_HOSTNAME } from "@/lib/workos";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
+import DashboardPage from "./pages/DashboardPage";
+import AIMemory from "./pages/AIMemory";
 import Products from "./pages/Products";
 import VoiceShop from "./pages/VoiceShop";
 import Login from "./pages/Login";
@@ -79,7 +81,9 @@ const AppRoutes = () => {
         <Route path="/login" element={<PageTransition keyProp={location.pathname}><Login /></PageTransition>} />
         <Route path="/signup" element={<PageTransition keyProp={location.pathname}><Signup /></PageTransition>} />
         <Route path="/auth/callback" element={<PageTransition keyProp={location.pathname}><AuthCallback /></PageTransition>} />
-        <Route path="/dashboard" element={<PageTransition keyProp={location.pathname}><Dashboard /></PageTransition>} />
+        <Route path="/dashboard" element={<PageTransition keyProp={location.pathname}><DashboardPage /></PageTransition>} />
+        <Route path="/ai-memory" element={<PageTransition keyProp={location.pathname}><AIMemory /></PageTransition>} />
+        <Route path="/old-dashboard" element={<PageTransition keyProp={location.pathname}><Dashboard /></PageTransition>} />
         <Route path="/checkout" element={<PageTransition keyProp={location.pathname}><Checkout /></PageTransition>} />
         <Route path="/order-success" element={<PageTransition keyProp={location.pathname}><OrderSuccess /></PageTransition>} />
         <Route path="/subscription-checkout" element={<PageTransition keyProp={location.pathname}><SubscriptionCheckout /></PageTransition>} />
